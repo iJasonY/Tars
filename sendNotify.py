@@ -74,7 +74,7 @@ class sendNotify:
 
     def serverNotify(self, text, desp):
         if self.SCKEY != '':
-            url = 'https://sc.ftqq.com/' + self.SCKEY + '.send'
+            url = 'https://sctapi.ftqq.com/' + self.SCKEY + '.send'
             response = json.dumps(requests.post(
                 url, data={'text': text, 'desp': desp}).json(), ensure_ascii=False)
             data = json.loads(response)
